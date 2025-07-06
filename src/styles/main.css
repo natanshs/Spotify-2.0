@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #000;
+  padding: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin: 15px 0;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #1DB954; /* Spotify green */
+}
+
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  overflow-y: auto;
+}
+
+.navbar {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.song-card {
+  width: 160px;
+  margin: 10px;
+  background-color: #282828;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+}
+
+.song-img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.song-title {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+
+.player-bar {
+  height: 80px;
+  background-color: #181818;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  bottom: 0;
+  left: 240px;
+  width: calc(100% - 240px);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+
+.player-song-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.player-song-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.song-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.song-artist {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+.player-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.player-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.player-icon:hover {
+  transform: scale(1.2);
+  color: #1DB954;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+}
+
+.time {
+  font-size: 12px;
+  color: #aaa;
+  width: 40px;
+  text-align: center;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background-color: #555;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-filled {
+  height: 100%;
+  background-color: #1DB954;
+  width: 0%;
+  border-radius: 3px;
+}
+
+.player-icon:hover {
+  transform: scale(1.2);
+  color: #1DB954;
+}
+.search-page {
+  padding: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.search-results {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.genre-page {
+  padding: 1rem;
+}
+
+.song-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+.song-card {
+  background-color: #181818;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 180px;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+}
+
+.cover-container {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.song-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.song-info {
+  margin-top: 0.75rem;
+}
+
+.song-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.song-album,
+.song-genre {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.song-album a,
+.song-genre a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.song-album a:hover,
+.song-genre a:hover {
+  text-decoration: underline;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  width: 28px;
+  height: 28px;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1DB954; /* Spotify green */
+}
+
